@@ -5,8 +5,10 @@ Simple button allowing to toggle Maintenance mode of your site.
 Installation
 =======
 Install synergy_maintenance_mode from git:
+
     gem 'synergy_maintenance_mode', :git => 'git@github.com:GarPit/synergy_maintenance_mode.git'
 Bundle:
+
     bundle install
 And run your server!
 
