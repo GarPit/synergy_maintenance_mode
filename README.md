@@ -14,7 +14,7 @@ And run your server!
 
 Usage
 =======
-You should provide 500.htm or 500.html page in your public/ folder. You can write there something like
+You should provide 500.htm (by default) page in your public/ folder. But you can set your "Maintenance Mode" page with Spree::Config[:maintenance_mode_page]. By default, it's equal to '500.htm'. You can write there something like
 "Sorry, our site is in Maintenance mode now, please come back later".
 
 
