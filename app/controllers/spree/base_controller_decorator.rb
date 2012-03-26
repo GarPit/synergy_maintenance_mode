@@ -4,6 +4,8 @@ Spree::BaseController.class_eval do
   protected
 
   def check_maintenance_mode
-    render :status => 500, :file => File.join(Rails.root, 'public', '500.htm'), :layout => false if Spree::Config[:maintenance_mode] and not params[:controller][/admin\//]
+    if File.exists?(File.join(Rails.root, 'public', Spree::Config[:maintenance_mode_page]))
+      render :file => File.join(Rails.root, 'public', Spree::Config[:maintenance_mode_page]), :layout => false if Spree::Config[:maintenance_mode] and not params[:controller][/admin\//]
+    end
   end
 end
